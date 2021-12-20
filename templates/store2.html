@@ -1,0 +1,52 @@
+{% extends 'list_base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<section class="products">
+    <div class="container">
+
+        <header>
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8 text-center">
+                    <h2 class="title">Product categories</h2>
+                    <div class="text">
+                        <p>Select category</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="row">
+
+            <!-- === product-item === -->
+            {% for product in products %}
+            <div class="col-md-4 col-xs-6">
+                <article>
+                    <div class="figure-block">
+                        <div class="image">
+                            <a href="{{product.get_url}}">
+                                <img src="{{product.image.url}}" alt="" width="360" />
+                            </a>
+                        </div>
+                        <div class="text">
+                            <h2 class="title h4"><a href="{{product.get_url}}">{{product.name}}</a></h2>
+                            <span class="description clearfix">{{product.description}}</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            {% endfor%}
+        </div><!--/row-->
+
+        
+    </div><!--/container-->
+</section>
+
+
+
+{% endblock %}
+
+

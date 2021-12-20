@@ -1,0 +1,261 @@
+{% load static %}
+<div class="page-loader"></div>
+
+<div class="wrapper">
+
+    <!--Use class "navbar-fixed" or "navbar-default" -->
+    <!--If you use "navbar-fixed" it will be sticky menu on scroll (only for large screens)-->
+
+    <!-- ======================== Navigation ======================== -->
+
+    <nav class="navbar-fixed">
+
+        <div class="container">
+
+            <!-- ==========  Top navigation ========== -->
+
+            <div class="navigation navigation-top clearfix">
+                <ul>
+                    <!--add active class for current page-->
+
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+
+                    <!--Currency selector-->
+
+                    <li class="nav-settings">
+                        <a href="javascript:void(0);" class="nav-settings-value"> USD $</a>
+                        <ul class="nav-settings-list">
+                            <li>USD $</li>
+                            <li>EUR €</li>
+                            <li>CHF Fr.</li>
+                            <li>GBP £</li>
+                        </ul>
+                    </li>
+
+                    <!--Language selector-->
+
+                    <li class="nav-settings">
+                        <a href="javascript:void(0);" class="nav-settings-value"> ENG</a>
+                        <ul class="nav-settings-list">
+                            <li>ENG</li>
+                            <li>GER</li>
+                            <li>لعربية</li>
+                            <li>עִבְרִית</li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0);" class="open-login"><i class="icon icon-user"></i></a></li>
+                    <li><a href="javascript:void(0);" class="open-search"><i class="icon icon-magnifier"></i></a></li>
+                    <li><a href="javascript:void(0);" class="open-cart"><i class="icon icon-cart"></i> <span>{{count}}</span></a></li>
+                </ul>
+            </div> <!--/navigation-top-->
+
+            <!-- ==========  Main navigation ========== -->
+
+            <div class="navigation navigation-main">
+
+                <!-- Setup your logo here-->
+
+                <a href="index.html" class="logo"><img src="{% static 'assets/images/logo.png' %}" alt="" /></a>
+
+                <!-- Mobile toggle menu -->
+
+                <a href="#" class="open-menu"><i class="icon icon-menu"></i></a>
+
+                <!-- Convertible menu (mobile/desktop)-->
+
+                <div class="floating-menu">
+
+                    <!-- Mobile toggle menu trigger-->
+
+                    <div class="close-menu-wrapper">
+                        <span class="close-menu"><i class="icon icon-cross"></i></span>
+                    </div>
+
+                    <ul>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        
+                        <!-- Multi-content dropdown -->
+
+                        <li>
+                            <a href="{% url 'home' %}">Pages <span class="open-dropdown"><i class="fa fa-angle-down"></i></span></a>
+                            <div class="navbar-dropdown">
+                                <div class="navbar-box">
+
+                                    <!-- box-1 (left-side)-->
+
+                                    <div class="box-1">
+                                        <div class="box">
+                                            <div class="h2">Find your inspiration</div>
+                                            <div class="clearfix">
+                                                <p>Homes that differ in terms of style, concept and architectural solutions have been furnished by Furniture Factory. These spaces tell of an international lifestyle that expresses modernity, research and a creative spirit.</p>
+                                                <a class="btn btn-clean btn-big" href="products-grid.html">Shop now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- box-2 (right-side)-->
+
+                                    <div class="box-2">
+                                        <div class="box clearfix">
+                                            <div class="row">
+                                     
+                                                <div class="col-md-4">
+                                                    <ul>
+                                                        <li class="label">Blog</li>
+                                                        <li><a href="{% url 'grid' %}">Blog grid</a></li>
+                                                        <li><a href="{% url 'grid2' %}">Blog list</a></li>
+                                                        <li><a href="{% url 'product_info' %}">Blog info</a></li>
+                                                  
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul>
+                                                        <li class="label">Shop</li>
+                                                        <li><a href="{% url 'store' %}">Shop</a></li>
+                                                        <li><a href="{% url 'store2' %}">Shop list</a></li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                         
+                                            </div> <!--/row-->
+                                        </div> <!--/box-->
+                                    </div> <!--/box-2-->
+                                </div> <!--/navbar-box-->
+                            </div> <!--/navbar-dropdown-->
+                        </li>
+
+                        <!-- Single dropdown-->
+
+                        <li>
+                            <a href="{% url 'store' %}">Shop <span class="open-dropdown"><i class="fa fa-angle-down"></i></span></a>
+                            <div class="navbar-dropdown navbar-dropdown-single">
+                                <div class="navbar-box">
+
+                                    <!-- box-2 (without 'box-1', box-2 will be displayed as full width)-->
+
+                                    <div class="box-2">
+                                        <div class="box clearfix">
+                                            <ul>
+                                                <li class="label">Shop</li>
+                                                <li><a href="{% url 'store' %}">Products grid</a></li>
+                                                <li><a href="{% url 'store2' %}">Products list</a></li>
+                                
+                                            </ul>
+                                         
+                                        </div> <!--/box-->
+                                    </div> <!--/box-2-->
+                                </div> <!--/navbar-box-->
+                            </div> <!--/navbar-dropdown-->
+                        </li>
+
+                        <!-- Furniture icons in dropdown-->
+
+                        <li>
+                            <a href="category.html">Icons <span class="open-dropdown"><i class="fa fa-angle-down"></i></span></a>
+                            <div class="navbar-dropdown">
+                                <div class="navbar-box">
+
+                                    <!-- box-1 (left-side)-->
+
+                                    <div class="box-1">
+                                        <div class="image">
+                                            <img src="{% static 'assets/images/blog-2.jpg' %}" alt="Lorem ipsum" />
+                                        </div>
+                                        <div class="box">
+                                            <div class="h2">Best ideas</div>
+                                            <div class="clearfix">
+                                                <p>Homes that differ in terms of style, concept and architectural solutions have been furnished by Furniture Factory. These spaces tell of an international lifestyle that expresses modernity, research and a creative spirit.</p>
+                                                <a class="btn btn-clean btn-big" href="ideas.html">Explore</a>
+                                            </div>
+                                        </div>
+                                    </div> <!--/box-1-->
+
+                                    <!-- box-2 (right-side)-->
+
+                                    <div class="box-2">
+                                        <div class="clearfix categories">
+                                            <div class="row">
+                                                
+                                             <!--icon item-->                                                
+                                                {% for category in categories %}
+                                                <div class="col-sm-3 col-xs-6">
+                                                    <a href="{{category.get_url}}">
+                                                        <figure>
+                                                            <i class="{{category.icons}}"></i>
+                                                            <figcaption>{{category.name}}</figcaption>
+                                                        </figure>
+                                                    </a>
+                                                </div>
+                                                {% endfor %}
+    
+                                         
+
+
+                                            </div> <!--/row-->
+                                        </div> <!--/categories-->
+                                    </div> <!--/box-2-->
+                                </div> <!--/navbar-box-->
+                            </div> <!--/navbar-dropdown-->
+                        </li>
+
+                        <!-- Mega menu dropdown -->
+
+     
+                    </ul>
+                </div> <!--/floating-menu-->
+            </div> <!--/navigation-main-->
+
+            <!-- ==========  Search wrapper ========== -->
+
+            <div class="search-wrapper">
+
+                <form action="{% url 'search' %}" class="search" method="get">
+                    <input  class="form-control" placeholder="Search..." name="keyword" />
+                    <button class="btn btn-main btn-search">Go!</button>
+    
+                </form>
+                <!-- Search results - live search -->
+            
+            </div>
+
+            <!-- ==========  Login wrapper ========== -->
+
+            <div class="login-wrapper">
+                <form>
+                    <div class="h4">Sign in</div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <a href="#forgotpassword" class="open-popup">Forgot password?</a>
+                        <a href="#createaccount" class="open-popup">Don't have an account?</a>
+                    </div>
+                    <button type="submit" class="btn btn-block btn-main">Submit</button>
+                </form>
+            </div>
+
+            <!-- ==========  Cart wrapper ========== -->
+
+           
+        </div> <!--/container-->
+    </nav>
+
+    <!-- ========================  Main header ======================== -->
+
+    <section class="main-header" style="background-image:url({% static 'assets/images/gallery-2.jpg' %})">
+        <header>
+            <div class="container">
+                <h1 class="h2 title">Blog</h1>
+                <ol class="breadcrumb breadcrumb-inverted">
+                    <li><a href="index.html"><span class="icon icon-home"></span></a></li>
+                    <li><a href="blog-grid.html">Blog</a></li>
+                    <li><a class="active" href="blog-1.html">Modern design</a></li>
+                </ol>
+            </div>
+        </header>
+    </section>
