@@ -57,7 +57,7 @@
 
                 <!-- Setup your logo here-->
 
-                <a href="index.html" class="logo"><img src="{% static 'assets/images/logo.png' %}" alt="" /></a>
+                <a href="{% url 'home' %}" class="logo"><img src="{% static 'assets/images/logo.png' %}" alt="" /></a>
 
                 <!-- Mobile toggle menu -->
 
@@ -79,53 +79,27 @@
                         <!-- Multi-content dropdown -->
 
                         <li>
-                            <a href="{% url 'home' %}">Pages <span class="open-dropdown"><i class="fa fa-angle-down"></i></span></a>
-                            <div class="navbar-dropdown">
+                            <a href="{% url 'grid' %}">Blog<span class="open-dropdown"><i class="fa fa-angle-down"></i></span></a>
+                            <div class="navbar-dropdown navbar-dropdown-single">
                                 <div class="navbar-box">
-
-                                    <!-- box-1 (left-side)-->
-
-                                    <div class="box-1">
-                                        <div class="box">
-                                            <div class="h2">Find your inspiration</div>
-                                            <div class="clearfix">
-                                                <p>Homes that differ in terms of style, concept and architectural solutions have been furnished by Furniture Factory. These spaces tell of an international lifestyle that expresses modernity, research and a creative spirit.</p>
-                                                <a class="btn btn-clean btn-big" href="products-grid.html">Shop now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- box-2 (right-side)-->
-
+    
+                                    <!-- box-2 (without 'box-1', box-2 will be displayed as full width)-->
+    
                                     <div class="box-2">
                                         <div class="box clearfix">
-                                            <div class="row">
-                                     
-                                                <div class="col-md-4">
-                                                    <ul>
-                                                        <li class="label">Blog</li>
-                                                        <li><a href="{% url 'grid' %}">Blog grid</a></li>
-                                                        <li><a href="{% url 'grid2' %}">Blog list</a></li>
-                                                        <li><a href="{% url 'product_info' %}">Blog info</a></li>
-                                                  
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <ul>
-                                                        <li class="label">Shop</li>
-                                                        <li><a href="{% url 'store' %}">Shop</a></li>
-                                                        <li><a href="{% url 'store2' %}">Shop list</a></li>
-                                                        
-                                                    </ul>
-                                                </div>
-                                         
-                                            </div> <!--/row-->
+                                            <ul>
+                                                <li><a href="{% url 'grid' %}">Blog grid</a></li>
+                                                <li><a href="{% url 'grid2' %}">Blog list</a></li>
+                                                <li><a href="{% url 'product_info' %}">Blog info</a></li>
+                                               
+                                            </ul>
+                                            
                                         </div> <!--/box-->
                                     </div> <!--/box-2-->
                                 </div> <!--/navbar-box-->
                             </div> <!--/navbar-dropdown-->
                         </li>
-
+    
                         <!-- Single dropdown-->
 
                         <li>
@@ -138,7 +112,7 @@
                                     <div class="box-2">
                                         <div class="box clearfix">
                                             <ul>
-                                                <li class="label">Shop</li>
+                                          
                                                 <li><a href="{% url 'store' %}">Products grid</a></li>
                                                 <li><a href="{% url 'store2' %}">Products list</a></li>
                                 
@@ -153,7 +127,7 @@
                         <!-- Furniture icons in dropdown-->
 
                         <li>
-                            <a href="category.html">Icons <span class="open-dropdown"><i class="fa fa-angle-down"></i></span></a>
+                            <a href="{% url 'store' %}">Category <span class="open-dropdown"><i class="fa fa-angle-down"></i></span></a>
                             <div class="navbar-dropdown">
                                 <div class="navbar-box">
 
@@ -252,9 +226,9 @@
             <div class="container">
                 <h1 class="h2 title">Blog</h1>
                 <ol class="breadcrumb breadcrumb-inverted">
-                    <li><a href="index.html"><span class="icon icon-home"></span></a></li>
-                    <li><a href="blog-grid.html">Blog</a></li>
-                    <li><a class="active" href="blog-1.html">Modern design</a></li>
+                    <li><a href="{% url 'home' %}"><span class="icon icon-home"></span></a></li>
+                    <li><a href="{% url 'grid' %}">Blog</a></li>
+                    <li><a class="active" href="{% url 'grid2' %}">Modern design</a></li>
                 </ol>
             </div>
         </header>

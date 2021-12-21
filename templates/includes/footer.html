@@ -138,7 +138,7 @@
 
 			<div class="col-sm-4">
 				<article>
-					<a href="{% url 'product_info' %}">
+					<a href="{% url 'grid' %}">
 						<div class="image">
 							<img src="{% static 'assets/images/project-1.jpg' %}" alt="" />
 						</div>
@@ -166,7 +166,7 @@
 
 			<div class="col-sm-4">
 				<article>
-					<a href="article.html">
+					<a href="{% url 'grid' %}">
 						<div class="image">
 							<img src="{% static 'assets/images/project-2.jpg' %}" alt="" />
 						</div>
@@ -194,7 +194,7 @@
 
 			<div class="col-sm-4">
 				<article>
-					<a href="article.html">
+					<a href="{% url 'grid' %}">
 						<div class="image">
 							<img src="{% static 'assets/images/project-3.jpg' %}" alt="" />
 						</div>
@@ -222,7 +222,7 @@
 		<!-- === button more === -->
 
 		<div class="wrapper-more">
-			<a href="ideas.html" class="btn btn-main">View all posts</a>
+			<a href="{% url 'grid' %}" class="btn btn-main">View all posts</a>
 		</div>
 
 	</div> <!--/container-->
@@ -239,7 +239,7 @@
 					We believe in creativity as one of the major forces of progress. With this idea, we traveled throughout Italy to find exceptional
 					artisans and bring their unique handcrafted objects to connoisseurs everywhere.
 				</p>
-				<p><a href="about.html" class="btn btn-clean">Read full story</a></p>
+				<p><a href="{% url 'product_info' %}" class="btn btn-clean">Read full story</a></p>
 			</div>
 		</div>
 	</div>
@@ -270,7 +270,7 @@
 
 			<div class="col-sm-4">
 				<article>
-					<a href="article.html">
+					<a href="{% url 'product_info' %}">
 						<div class="image" style="background-image:url({% static 'assets/images/blog-1.jpg' %})">
 							<img src="{% static 'assets/images/blog-1.jpg' %}" alt="" />
 						</div>
@@ -297,7 +297,7 @@
 
 			<div class="col-sm-4">
 				<article>
-					<a href="article.html">
+					<a href="{% url 'product_info' %}">
 						<div class="image" style="background-image:url({% static 'assets/images/blog-2.jpg' %})">
 							<img src="{% static 'assets/images/blog-1.jpg' %}" alt="" />
 						</div>
@@ -324,7 +324,7 @@
 
 			<div class="col-sm-4">
 				<article>
-					<a href="article.html">
+					<a href="{% url 'product_info' %}">
 						<div class="image" style="background-image:url({% static 'assets/images/blog-8.jpg' %})">
 							<img src="{% static 'assets/images/blog-8.jpg' %}" alt="" />
 						</div>
@@ -351,7 +351,7 @@
 		<!-- === button more === -->
 
 		<div class="wrapper-more">
-			<a href="blog-grid.html" class="btn btn-main">View all posts</a>
+			<a href="{% url 'grid' %}" class="btn btn-main">View all posts</a>
 		</div>
 
 	</div> <!--/container-->
