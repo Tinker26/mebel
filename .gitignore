@@ -7,7 +7,7 @@ static/
 *.pyc
 habibi/migrations/__pycache__/*
 # meida
-media/
+
 # C extension
 *.so
 
@@ -63,7 +63,7 @@ coverage.xml
 # Django stuff:
 *.log
 local_settings.py
-db.sqlite3
+
 db.sqlite3-journal
 
 # Flask stuff:
